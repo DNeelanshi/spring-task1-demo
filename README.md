@@ -1,0 +1,1 @@
+Spring task1 with dependancy injection via setter injection
