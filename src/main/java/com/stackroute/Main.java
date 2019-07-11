@@ -26,23 +26,14 @@ public class Main {
         ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
 
 
-        Movie movie1 = context.getBean("movie1", Movie.class);
-        movie1.display();
+        Movie movie = context.getBean("movie", Movie.class);
+//        Movie movie2 = context.getBean("movie2", Movie.class);
 
-        Movie movieB = context.getBean("movie1", Movie.class);
-        movie1.display();
+        System.out.println(movie);
+//        System.out.println(movie2);
 
-        Movie movie2 = context.getBean("movie2", Movie.class);
-        movie2.display();
 
-        Movie movie3 = context.getBean("movie3", Movie.class);
-        movie3.display();
 
-        Movie movie4 = context.getBean("movie4", Movie.class);
-        movie4.display();
-
-        System.out.println(movie1 == movieB);
-        System.out.println(movie4 == movie3);
 
     }
 

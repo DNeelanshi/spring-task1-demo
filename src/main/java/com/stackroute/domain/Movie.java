@@ -2,19 +2,20 @@ package com.stackroute.domain;
 
 public class Movie {
 
-   private Actor actor;
+   private Actor actorr;
 
-    public Movie(Actor actor) {
-        this.actor = actor;
+    @Override
+    public String toString() {
+        return "Movie{" +
+                "actor=" + actorr +
+                '}';
     }
 
-    public Actor getActor() {
-        return actor;
+    public Actor getActorr() {
+        return actorr;
     }
 
-    public void display(){
-
-
-        System.out.println("Actor name: "+actor.getName()+"\nAge : "+actor.getAge()+"\nGender: "+actor.getGender());
+    public void setActorr(Actor actorr) {
+        this.actorr = actorr;
     }
 }
