@@ -21,4 +21,12 @@
     <bean id="cycle" class="com.stackroute.demo.BeanLifeCycleDemo" init-method="initialize" destroy-method="clean" ></bean>
 <bean id="postprocessing" class="com.stackroute.demo.BeanPostProcessorDemoBean"></bean>
 
+
+    <bean id="employee" class="com.stackroute.domain.Employee">
+        <property name="company" value="IBM" />
+    </bean>
+    <bean id="childemployee" parent="employee">
+        <property name="empId" value="101" />
+        <property name="name" value="Neelanshi" />
+    </bean>
 </beans>
