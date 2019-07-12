@@ -23,21 +23,31 @@ public class Main {
     public static void main(String[]args) {
 
 //using application context
-        ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
-
-
-        Movie movie = context.getBean("movie", Movie.class);
-
-        System.out.println(movie);
-
-        XmlBeanFactory xmlBeanFactory= new XmlBeanFactory ( new ClassPathResource("beans.xml"));
-        Movie movieFirst= (Movie)xmlBeanFactory.getBean("movie");
-
-        movie.setApplicationContext(context);
-        movieFirst.setBeanFactory(xmlBeanFactory);
-        movie.setBeanName("beam123");
+        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("beans.xml");
+        ((ClassPathXmlApplicationContext) applicationContext).registerShutdownHook();
+        BeanLifeCycleDemo beanLifeCycleDemo=(BeanLifeCycleDemo) applicationContext.getBean("cycle");
 
 
     }
+
+    public void afterPropertiesSet () throws Exception {
+        System.out.println("After properties init");
+
+    }
+    public void initialize ()
+    {
+        System.out.println("Initialization");
+    }
+
+    public  void clean()
+    {
+        System.out.println("custom destroy");
+    }
+    public void destroy ()
+    {
+        System.out.println("Destroy");
+    }
+
+
 
 }
