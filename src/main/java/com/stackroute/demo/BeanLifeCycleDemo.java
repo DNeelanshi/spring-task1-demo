@@ -1,4 +1,4 @@
-package com.stackroute;
+package com.stackroute.demo;
 
 import org.springframework.beans.factory.DisposableBean;
 import org.springframework.beans.factory.InitializingBean;
@@ -15,11 +15,7 @@ public class BeanLifeCycleDemo implements InitializingBean, DisposableBean {
 
         ((ClassPathXmlApplicationContext) applicationContext).registerShutdownHook();
 
-        BeanLifeCycleDemo beanLifeCycleDemo = (BeanLifeCycleDemo) applicationContext.getBean("lifecycle");
-
-
-
-
+        BeanLifeCycleDemo beanLifeCycleDemo = (BeanLifeCycleDemo) applicationContext.getBean("cycle");
 
     }
     public void initialize ()

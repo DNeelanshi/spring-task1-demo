@@ -18,7 +18,7 @@
 <!--    </bean>-->
 
 
-    <bean id="cycle" class="com.stackroute.BeanLifeCycleDemo" init-method="initialize" destroy-method="clean" ></bean>
+    <bean id="cycle" class="com.stackroute.demo.BeanLifeCycleDemo" init-method="initialize" destroy-method="clean" ></bean>
 
 
 </beans>
