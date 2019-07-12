@@ -6,7 +6,8 @@ import com.stackroute.domain.Employee;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-public class Main {
+public class
+Main {
 
     public  static  void main(String args []) {
 
@@ -19,8 +20,14 @@ public class Main {
         BeanPostProcessorDemoBean beanPostProcessorDemoBean = applicationContext.getBean("postprocessing",BeanPostProcessorDemoBean.class);
 
         Employee emp = applicationContext.getBean("childemployee",Employee.class);
+        Employee empp = applicationContext.getBean("parentemployee",Employee.class);
 
-        System.out.println("Bean definition inheritance:");
+
+        System.out.println("parent:");
+        System.out.println(empp.toString());
+
+        System.out.println("child:");
         System.out.println(emp.toString());
+
     }
 }
