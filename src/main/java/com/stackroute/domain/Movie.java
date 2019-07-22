@@ -2,6 +2,7 @@ package com.stackroute.domain;
 
 public class Movie {
 
+   //dependency actor with getter and setter
    private Actor actor;
 
     public void setActor(Actor actor) {
@@ -12,6 +13,7 @@ public class Movie {
         return actor;
     }
 
+   //fetching avot details using actor.
     public void display(){
 
 
