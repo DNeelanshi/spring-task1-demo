@@ -6,7 +6,7 @@ public class Actor {
     private String gender;
     private int age;
 
-   
+   //generated getter and setter for dependencies.
 
     public void setName(String name) {
         this.name = name;
