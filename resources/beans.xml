@@ -4,31 +4,9 @@
        xsi:schemaLocation="
         http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans.xsd">
-
-
-    <!-- bean definitions here -->
-    <!--//using constructor method-->
-
-<!--    <bean id="movie"  autowire="constructor" class="com.stackroute.domain.Movie">-->
-<!--    </bean>-->
-<!--    <bean id="actorr" name="actorr" class="com.stackroute.domain.Actor">-->
-<!--        <constructor-arg name="name" value="Neelanshi" type="String" index="0"></constructor-arg>-->
-<!--        <constructor-arg name="gender" value="female" type="String" index="1"></constructor-arg>-->
-<!--        <constructor-arg name="age" value="23" type="int" index="2"></constructor-arg>-->
-<!--    </bean>-->
+>
 
 
     <bean id="cycle" class="com.stackroute.demo.BeanLifeCycleDemo" init-method="initialize" destroy-method="clean" ></bean>
 <bean id="postprocessing" class="com.stackroute.demo.BeanPostProcessorDemoBean"></bean>
-
-
-    <bean id="parentemployee" class="com.stackroute.domain.Employee">
-        <property name="company" value="IBM" />
-        <property name="empId" value="101" />
-        <property name="name" value="Neelanshi" />
-    </bean>
-    <bean id="childemployee" parent="parentemployee">
-<!--        <property name="empId" value="102" />-->
-<!--        <property name="name" value="sidra" />-->
-    </bean>
 </beans>
