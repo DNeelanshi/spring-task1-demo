@@ -1,1 +1,3 @@
-Spring task1 with dependancy injection via setter injection
+Spring task1 with dependancy injection.
+
+implementing task using bean definition inheritance 
