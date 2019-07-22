@@ -19,15 +19,6 @@ Main {
 // getting the bean of post processing to display lifecycle of bean
         BeanPostProcessorDemoBean beanPostProcessorDemoBean = applicationContext.getBean("postprocessing",BeanPostProcessorDemoBean.class);
 
-        Employee emp = applicationContext.getBean("childemployee",Employee.class);
-        Employee empp = applicationContext.getBean("parentemployee",Employee.class);
-
-
-        System.out.println("parent:");
-        System.out.println(empp.toString());
-
-        System.out.println("child:");
-        System.out.println(emp.toString());
-
+      
     }
 }
