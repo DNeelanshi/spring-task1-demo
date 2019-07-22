@@ -1,4 +1,4 @@
-Spring task1 with dependancy injection via setter injection
+Spring task1 with dependancy injection
 
 Task 6:
 
