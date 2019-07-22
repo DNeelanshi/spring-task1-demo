@@ -18,6 +18,8 @@ public class BeanLifeCycleDemo implements InitializingBean, DisposableBean {
         BeanLifeCycleDemo beanLifeCycleDemo = (BeanLifeCycleDemo) applicationContext.getBean("cycle");
 
     }
+    
+    //creating cistom init and destroy methods to learn bean lifecycle.
     public void initialize ()
     {
         System.out.println("Initialization");
