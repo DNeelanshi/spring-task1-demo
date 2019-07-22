@@ -13,10 +13,10 @@ Main {
 
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("beans.xml");
 
-        ((ClassPathXmlApplicationContext) applicationContext).registerShutdownHook();
+        ((ClassPathXmlApplicationContext) applicationContext).registerShutdownHook(); // this is to destroy the object.
 
         BeanLifeCycleDemo beanLifeCycleDemo = (BeanLifeCycleDemo) applicationContext.getBean("cycle");
-
+// getting the bean of post processing to display lifecycle of bean
         BeanPostProcessorDemoBean beanPostProcessorDemoBean = applicationContext.getBean("postprocessing",BeanPostProcessorDemoBean.class);
 
         Employee emp = applicationContext.getBean("childemployee",Employee.class);
